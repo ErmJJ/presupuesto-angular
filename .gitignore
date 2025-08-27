@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -22,6 +21,7 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -41,7 +41,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-=======
 # Angular specific
 /dist/
 /out-tsc/
@@ -70,4 +69,3 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
->>>>>>> 3ff0ae7eed15b519fba30c9c54ae0d69d8a950b6
