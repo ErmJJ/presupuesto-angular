@@ -29,14 +29,9 @@ src/
 ├── app/
 │   ├── administrar-presupuesto/
 │   │   ├── agregar-gasto/
-│   │   ├── listado-gastos/
-│   │   └── administrar-presupuesto.component.ts
-│   ├── services/
-│   │   └── presupuesto.ts
-│   ├── app-routing.module.ts
-│   └── app.module.ts
-├── assets/
-├── environments/
+│   │   └── listado-gastos/
+│   └── services/
+│      └── presupuesto.ts│   
 └── index.html
 ```
 
