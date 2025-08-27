@@ -14,7 +14,8 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/presupuesto-app",
-            "baseHref": "/presupuesto-angular/",
+            "baseHref": "/presupuesto-angular/src/",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
