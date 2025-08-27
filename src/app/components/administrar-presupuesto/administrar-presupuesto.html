@@ -1,0 +1,55 @@
+<div class="container my-4">
+  <!-- Encabezado -->
+  <div class="row mb-3 align-items-center">
+    <div class="col">
+      <h3 class="fw-bold">Administrar presupuesto</h3>
+      <p class="text-muted mb-0">Administra tus gastos y visualiza el presupuesto restante.</p>
+    </div>
+
+    <div class="col-auto d-flex gap-2">
+      <!-- Volver -->
+      <button class="btn btn-outline-secondary" (click)="volver()">
+        <i class="bi bi-arrow-left"></i> Volver
+      </button>
+
+      <!-- Eliminar gastos -->
+      <button class="btn btn-warning" (click)="eliminarGastos()" [disabled]="!gastos.length">
+        <i class="bi bi-trash"></i> Eliminar gastos
+        <span class="badge bg-light text-dark ms-1">{{ gastos.length }}</span>
+      </button>
+
+      <!-- Eliminar presupuesto -->
+      <button class="btn btn-danger" (click)="eliminarPresupuesto()" [disabled]="initial === 0">
+        <i class="bi bi-exclamation-triangle"></i> Eliminar presupuesto
+      </button>
+    </div>
+  </div>
+
+  <!-- Si no hay presupuesto inicial -->
+  <div *ngIf="initial === 0" class="row">
+    <div class="col-md-8">
+      <div class="alert alert-info shadow-sm">
+        <h5 class="mb-1">No hay presupuesto inicial</h5>
+        <p class="mb-0">Antes de administrar gastos, debes crear un presupuesto.</p>
+      </div>
+    </div>
+    <div class="align-items-end col-md-4 d-flex flex-column gap-2">
+      <button class="btn btn-primary w-50 border border-dark" (click)="irACrear()">Crear presupuesto</button>
+      <button class="btn btn-outline-secondary w-50 border border-dark" (click)="volver()"><strong>Volver</strong></button>
+    </div>
+
+  </div>
+
+  <!-- Si hay presupuesto inicial -->
+  <div *ngIf="initial > 0" class="row">
+    <!-- Agregar gasto -->
+    <div class="col-md-5 mb-3">
+      <app-agregar-gasto></app-agregar-gasto>
+    </div>
+
+    <!-- Listado de gastos -->
+    <div class="col-md-7">
+      <app-listado-gastos></app-listado-gastos>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* importar bootstrap */
+@import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: #f5f7fb;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: #222;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.navbar-brand img {
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Progress bar border radius */
+.progress {
+  border-radius: 8px;
+}
+
+.progress-bar.bg-warning { color: #212529; } /* mejor contraste */

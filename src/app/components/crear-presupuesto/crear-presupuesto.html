@@ -1,0 +1,23 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Crear presupuesto</h3>
+          <p class="text-muted">Ingresa el monto total que deseas administrar.</p>
+
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label class="form-label">Monto total</label>
+              <input type="number" class="form-control form-control-lg" formControlName="cantidad" placeholder="Ej: 100000">
+            </div>
+
+            <div *ngIf="errorMsg" class="alert alert-danger">{{ errorMsg }}</div>
+
+            <button type="submit" class="btn btn-primary w-100">Guardar y administrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

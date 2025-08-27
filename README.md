@@ -1,59 +1,94 @@
-# PresupuestoApp
+# 💰 Proyecto de Presupuesto en Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+## 📌 Descripción
+Aplicación web en **Angular** para gestionar presupuestos personales. Permite crear presupuestos, registrar y eliminar gastos, mostrar el listado de gastos y calcular el presupuesto restante en tiempo real, con interfaz responsiva y moderna usando **Bootstrap**.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ Funcionalidades
+- 📝 Crear un **presupuesto inicial**.
+- ➕ Agregar gastos con nombre, monto y fecha.
+- ❌ Eliminar gastos fácilmente.
+- 📊 Ver listado de gastos y **presupuesto restante** en tiempo real.
+- 🖥️ Interfaz amigable con navegación intuitiva.
+- 🎨 Diseño responsivo con **Bootstrap** y estilos personalizados.
 
-```bash
-ng serve
+---
+
+## 🛠 Tecnologías
+- 🔷 **Angular 15+**
+- 💻 **TypeScript**
+- 🎨 **Bootstrap 5**
+- 🌐 HTML5 & CSS3
+
+---
+
+## 🗂 Estructura del proyecto
+```
+src/
+├── app/
+│   ├── administrar-presupuesto/
+│   │   ├── agregar-gasto/
+│   │   ├── listado-gastos/
+│   │   └── administrar-presupuesto.component.ts
+│   ├── services/
+│   │   └── presupuesto.ts
+│   ├── app-routing.module.ts
+│   └── app.module.ts
+├── assets/
+├── environments/
+└── index.html
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ⚡ Instalación
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/usuario/proyecto-presupuesto-angular.git
+   ```
+2. Entrar en la carpeta del proyecto:
+   ```bash
+   cd proyecto-presupuesto-angular
+   ```
+3. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+4. Ejecutar la aplicación:
+   ```bash
+   ng serve
+   ```
+5. Abrir en el navegador:
+   ```
+   http://localhost:4200
+   ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🚀 Uso
+1. Crear un **presupuesto inicial** al iniciar.
+2. Agregar gastos con nombre y monto.
+3. Ver el **listado de gastos** y el presupuesto restante.
+4. Eliminar gastos si es necesario.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🤝 Contribuciones
+Si deseas contribuir:
+1. Haz un fork del repositorio.
+2. Crea una rama nueva: `git checkout -b feature/nueva-funcionalidad`
+3. Realiza tus cambios y haz commit: `git commit -m "Agrega nueva funcionalidad"`
+4. Haz push a tu rama: `git push origin feature/nueva-funcionalidad`
+5. Abre un Pull Request para revisión.
 
-## Building
+---
 
-To build the project run:
+## 📄 Licencia
+Este proyecto está bajo la licencia **MIT**.  
+Ver el archivo [LICENSE](LICENSE) para más detalles.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👨🏻‍💻 Autor 
+- **Julian Hernandez** - Desarrollador principal
