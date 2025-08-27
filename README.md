@@ -16,7 +16,7 @@ Aplicación web en **Angular** para gestionar presupuestos personales. Permite c
 ---
 
 ## 🛠 Tecnologías
-- 🔷 **Angular 15+**
+- 🔷 **Angular 19+**
 - 💻 **TypeScript**
 - 🎨 **Bootstrap 5**
 - 🌐 HTML5 & CSS3
@@ -29,14 +29,9 @@ src/
 ├── app/
 │   ├── administrar-presupuesto/
 │   │   ├── agregar-gasto/
-│   │   ├── listado-gastos/
-│   │   └── administrar-presupuesto.component.ts
-│   ├── services/
-│   │   └── presupuesto.ts
-│   ├── app-routing.module.ts
-│   └── app.module.ts
-├── assets/
-├── environments/
+│   │   └── listado-gastos/
+│   └── services/
+│      └── presupuesto.ts│   
 └── index.html
 ```
 
