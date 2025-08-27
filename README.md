@@ -16,7 +16,7 @@ Aplicación web en **Angular** para gestionar presupuestos personales. Permite c
 ---
 
 ## 🛠 Tecnologías
-- 🔷 **Angular 15+**
+- 🔷 **Angular 19+**
 - 💻 **TypeScript**
 - 🎨 **Bootstrap 5**
 - 🌐 HTML5 & CSS3
