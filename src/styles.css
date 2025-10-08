@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f4f7f6; /* Base color in case the gradient doesn’t load */
+  background: linear-gradient(to top, #e9ecef, #f8f9fa); /* Soft gradient */
+  color: #212529; /* A not-so-pure black, softer on the eyes */
+  transition: background-color 0.3s ease;
+}
+
+.card {
+  border: none; /* Remove the default border */
+  border-radius: 1rem; /* More rounded corners */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.progress {
+  border-radius: 1rem;
+  height: 1rem;
+}
+
+.btn {
+  border-radius: 0.5rem; /* Slightly rounded buttons */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Base styles for all devices (greater than 300px) */
+@media (width >= 300px) {
+  h3 {
+    font-weight: 600; /* Make the titles slightly bolder */
+  }
+}
+
+@media (width < 1000px) {
+  /* Reduce padding in the main container to give more space */
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  /* In the manage component, make the action buttons take full width */
+  .col-auto.d-flex.gap-2 {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .col-auto.d-flex.gap-2 .btn {
+    width: 100%;
+  }
+}
+
+/* Specific adjustments for tablets in portrait mode */
+@media (640px <= width < 768px) {
+  /* Slightly increase the base font size for better readability */
+  body {
+    font-size: 1.1rem;
+  }
+}

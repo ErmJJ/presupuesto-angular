@@ -1,0 +1,54 @@
+<div class="container my-4">
+  <!-- Header -->
+  <div class="row mb-3 align-items-center">
+    <div class="col">
+      <h3 class="fw-bold">Manage Budget</h3>
+      <p class="text-muted mb-0">Manage your expenses and view the remaining budget.</p>
+    </div>
+
+    <div class="col-auto d-flex gap-2">
+      <!-- Go back -->
+      <button class="btn btn-outline-secondary" (click)="goBack()">
+        <i class="bi bi-arrow-left"></i> Go Back
+      </button>
+
+      <!-- Remove expenses -->
+      <button class="btn btn-warning" (click)="removeExpenses()" [disabled]="!expenses.length">
+        <i class="bi bi-trash"></i> Remove Expenses
+        <span class="badge bg-light text-dark ms-1">{{ expenses.length }}</span>
+      </button>
+
+      <!-- Remove budget -->
+      <button class="btn btn-danger" (click)="removeBudget()" [disabled]="initial === 0">
+        <i class="bi bi-exclamation-triangle"></i> Remove Budget
+      </button>
+    </div>
+  </div>
+
+  <!-- If there is no initial budget -->
+  <div *ngIf="initial === 0" class="row">
+    <div class="col-md-8">
+      <div class="alert alert-info shadow-sm">
+        <h5 class="mb-1">No initial budget</h5>
+        <p class="mb-0">Before managing expenses, you must create a budget.</p>
+      </div>
+    </div>
+    <div class="align-items-end col-md-4 d-flex flex-column gap-2">
+      <button class="btn btn-primary w-50 border border-dark" (click)="goToCreate()">Create Budget</button>
+      <button class="btn btn-outline-secondary w-50 border border-dark" (click)="goBack()"><strong>Go Back</strong></button>
+    </div>
+  </div>
+
+  <!-- If there is an initial budget -->
+  <div *ngIf="initial > 0" class="row">
+    <!-- Add expense -->
+    <div class="col-md-5 mb-3">
+      <app-add-expense></app-add-expense>
+    </div>
+
+    <!-- Expense list -->
+    <div class="col-md-7">
+      <app-expense-list></app-expense-list>
+    </div>
+  </div>
+</div>

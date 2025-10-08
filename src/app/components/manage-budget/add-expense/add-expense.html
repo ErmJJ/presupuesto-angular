@@ -1,0 +1,20 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">Add Expense</h5>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="mb-2">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Ex: Supermarket">
+      </div>
+      <div class="mb-2">
+        <label class="form-label">Amount</label>
+        <input type="number" class="form-control" formControlName="amount" placeholder="Ex: 25000">
+      </div>
+
+      <div *ngIf="errorMsg" class="alert alert-danger">{{ errorMsg }}</div>
+      <div *ngIf="successMsg" class="alert alert-success">{{ successMsg }}</div>
+
+      <button type="submit" class="btn btn-success w-100">Add</button>
+    </form>
+  </div>
+</div>

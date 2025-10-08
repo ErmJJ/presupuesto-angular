@@ -1,0 +1,42 @@
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div>
+        <h5 class="card-title mb-0">Summary</h5>
+        <small class="text-muted">Initial and remaining budget</small>
+      </div>
+      <div class="text-end">
+        <div><small class="text-muted">Initial</small></div>
+        <div class="fw-bold">{{ initial | currency:'': 'symbol':'1.0-0' }}</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="d-flex justify-content-between">
+        <small class="text-muted">Remaining</small>
+        <small class="fw-bold">{{ remaining | currency:'': 'symbol':'1.0-0' }}</small>
+      </div>
+      <div class="progress mt-2" style="height:12px;">
+        <div class="progress-bar {{ progressBarClass() }}" role="progressbar" [style.width.%]="remainingPercentage()" 
+             [attr.aria-valuenow]="remainingPercentage()" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+      <div class="mt-1"><small class="text-muted">{{ remainingPercentage() }}% remaining</small></div>
+    </div>
+
+    <h6>Expenses</h6>
+    <ul class="list-group mb-2" *ngIf="expenses.length; else noExpenses">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let e of expenses">
+        <div>
+          <strong>{{ e.name }}</strong><br/><small class="text-muted">{{ e.amount | currency:'': 'symbol':'1.0-0' }}</small>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-sm btn-outline-danger" (click)="remove(e.id)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    <ng-template #noExpenses>
+      <div class="text-center text-muted py-3">No expenses recorded</div>
+    </ng-template>
+  </div>
+</div>

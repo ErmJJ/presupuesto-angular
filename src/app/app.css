@@ -1,0 +1,9 @@
+.app-container {
+  display: flex; /* 1. Activate Flexbox */
+  flex-direction: column; /* 2. Stack the elements vertically */
+  min-height: 100vh; /* 3. The container takes AT LEAST 100% of the screen height */
+}
+
+main {
+  flex: 1; /* 4. (The most important step) The main content grows to fill any remaining space */
+}

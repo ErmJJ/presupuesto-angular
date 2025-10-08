@@ -1,0 +1,8 @@
+.social-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Enlarges the icon when hovering the mouse */
+  color: #0d6efd;
+}

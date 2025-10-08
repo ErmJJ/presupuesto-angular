@@ -1,0 +1,10 @@
+.btn.active {
+  background-color: #0dcaf0; /* Bootstrap info color */
+  color: #000;
+  border-color: #0dcaf0;
+}
+
+/* For the main button, which is already solid, we can make it slightly brighter */
+.btn-info.active {
+  filter: brightness(1.1);
+}
